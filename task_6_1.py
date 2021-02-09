@@ -48,6 +48,7 @@ while num > 0:
 
 print(f'чётных цифр: {even}, нечётных цифр: {not_even}')
 print(getsizeof(DUO), getsizeof(num), getsizeof(even), getsizeof(not_even))
+
 # Результат работы getsizeof: 14 12 14 14
 # num был преобразован из строкового типа в целочисленный, поэтому занял 12 байт вместо 18 (в предыдущем варианте)
 #  Общая сумма использованной памяти: 54 байта.
@@ -67,6 +68,7 @@ for digit in digits:
 # print(even, not_even)
 print(f'чётных цифр: {len(even)}, нечётных цифр: {len(not_even)}')
 print(getsizeof(DUO), getsizeof(digits), getsizeof(even), getsizeof(not_even), getsizeof(digit))
+
 # Результат работы getsizeof: 14 68 60 60 26
 # Три массива потребляют больше всего памяти.
 # Общая сумма использованной памяти: 228 байт.

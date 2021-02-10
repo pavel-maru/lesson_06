@@ -15,7 +15,7 @@ from sys import getsizeof
 def mem_in_lst(lst):
     sum_ = getsizeof(lst)
     for _ in lst:
-        sum_ += getsizeof(el)
+        sum_ += getsizeof(_)
     return sum_
 
 # var.1

@@ -6,17 +6,17 @@
 # Задание 2_2. Посчитать четные и нечетные цифры введенного натурального числа.
 # Например, если введено число 34560, в нем 3 четные цифры (4, 6 и 0) и 2 нечетные (3 и 5).
 
-from sys import getsizeof
-
-def mem_in_lst(list):
-    sum_ = 0
-    for el in list:
-        sum_ += getsizeof(el)
-    return sum_
-
 # OS Windows 64-разрядная.
 # Python 3.8.5 (tags/v3.8.5:580fbb0, Jul 20 2020, 15:43:08) [MSC v.1926 32 bit (Intel)] on win32
 # Во всех трёх вариантах задачи вводится число 1234567890
+
+from sys import getsizeof
+
+def mem_in_lst(lst):
+    sum_ = getsizeof(lst)
+    for el in lst:
+        sum_ += getsizeof(el)
+    return sum_
 
 # var.1
 BASE = 10
@@ -34,7 +34,7 @@ for i in range(LENGTH):
         not_even += 1
 
 print(f'чётных цифр: {even}, нечётных цифр: {not_even}')
-sum_memory = getsizeof(BASE) + getsizeof(DUO) + getsizeof(num) + getsizeof(LENGTH)\
+sum_memory = getsizeof(BASE) + getsizeof(DUO) + getsizeof(num) + getsizeof(LENGTH) \
              + getsizeof(even) + getsizeof(not_even) + getsizeof(i) + getsizeof(digit)
 print(sum_memory)
 
@@ -74,7 +74,8 @@ for digit in digits:
 # print(even, not_even)
 print(f'чётных цифр: {len(even)}, нечётных цифр: {len(not_even)}')
 
-sum_memory = getsizeof(DUO) + getsizeof(digits) + getsizeof(even) + getsizeof(not_even) + getsizeof(digit) \
+# print(mem_in_lst(digits), mem_in_lst(even), mem_in_lst(not_even))
+sum_memory = getsizeof(DUO) + getsizeof(digit) \
              + mem_in_lst(digits) + mem_in_lst(even) + mem_in_lst(not_even)
 print(sum_memory)
 

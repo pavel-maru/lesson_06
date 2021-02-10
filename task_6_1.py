@@ -56,8 +56,8 @@ print(f'чётных цифр: {even}, нечётных цифр: {not_even}')
 sum_memory = getsizeof(DUO) + getsizeof(num) + getsizeof(even) + getsizeof(not_even)
 print(sum_memory)
 
-# num был преобразован из строкового типа в целочисленный, поэтому занял 12 байт вместо 18 (в предыдущем варианте)
 # Использовано памяти: 54 байта.
+# num был преобразован из строкового типа в целочисленный, поэтому занял 12 байт вместо 18 (в предыдущем варианте)
 
 # var.3
 DUO = 2
@@ -77,6 +77,7 @@ print(f'чётных цифр: {len(even)}, нечётных цифр: {len(not_
 sum_memory = getsizeof(DUO) + getsizeof(digits) + getsizeof(even) + getsizeof(not_even) + getsizeof(digit) \
              + mem_in_lst(digits) + mem_in_lst(even) + mem_in_lst(not_even)
 print(sum_memory)
+
 # Использовано памяти: 748
 # Три массива потребляют больше всего памяти.
 
